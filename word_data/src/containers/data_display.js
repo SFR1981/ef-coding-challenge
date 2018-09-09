@@ -20,6 +20,7 @@ render(){
   const words = this.state.words
   const data_converter = new DataConverter();
   const tableInput = data_converter.wordsPreparedForTable(words)
+  const d3Input = data_converter.wordsPreparedForWordCloud(words)
   return (
 
       <Router>
@@ -29,7 +30,7 @@ render(){
         <Route path="/table"
         render={()=> <TableView wordArray={tableInput}/>}/>
         <Route path="/cloud"
-         render={() => <CloudView /> } />
+         render={() => <CloudView cloudWords={d3Input} /> } />
       </React.Fragment>
     </Router>
 
