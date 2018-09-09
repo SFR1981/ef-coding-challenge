@@ -59,4 +59,19 @@ DataConverter.prototype.prepareWords = function (words) {
 }
 
 
+DataConverter.prototype.wordsPreparedForTable = function (words) {
+  let hash = this.prepareWords(words);
+  return this.hashToArrayforTable(hash);
+
+};
+
+DataConverter.prototype.wordsPreparedForWordCloud = function (words) {
+  let hash = this.prepareWords(words);
+  return this.hashToD3Input(hash);
+
+};
+
+
+
+
 module.exports = DataConverter;
