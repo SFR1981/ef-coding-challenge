@@ -16,28 +16,21 @@ class DataDisplay extends Component {
     }
   }
 
-
-
-
-
-
-
 render(){
-
-
-
-    return (
+  const words = this.state.words
+  const data_converter = new DataConverter();
+  const tableInput = data_converter.wordsPreparedForTable(words)
+  return (
 
       <Router>
       <React.Fragment>
         <NavBar />
         <Route exact path="/" component={Home}/>
         <Route path="/table"
-        render={()=> <TableView />}/>
+        render={()=> <TableView wordArray={tableInput}/>}/>
         <Route path="/cloud"
          render={() => <CloudView /> } />
       </React.Fragment>
-
     </Router>
 
       )
