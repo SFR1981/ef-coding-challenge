@@ -30,6 +30,23 @@ describe('data converter', function () {
   });
 
 
+    it('should convert an object into a form tractable to d3', function(){
+      const result = converter.hashToD3Input({ one: 2, two: 1, three: 1 });
+      console.log(result);
+      assert.deepStrictEqual(result, [
+                                      { text: 'one', value: 2 },
+                                      { text: 'two', value: 1 },
+                                      { text: 'three', value: 1 }
+                                     ])
+    });
+
+    it('should prepare hash for input to views', function(){
+      const result = converter.prepareWords(["one two","three","one"])
+      assert.deepStrictEqual(result, result)
+    })
+
+
+
 
 
 });

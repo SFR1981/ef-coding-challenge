@@ -42,4 +42,21 @@ DataConverter.prototype.hashToArrayforTable = function (hash) {
 }
 
 
+// the D3 library I will use requires the input data in this specific format
+DataConverter.prototype.hashToD3Input = function (hash) {
+  var data = []
+   for(var word in hash) {
+    data.push({text:word, value:hash[word]})
+     }
+     return data;
+};
+
+// streamline method calls
+DataConverter.prototype.prepareWords = function (words) {
+  let string = this.wordsToSingleString(words);
+  let array = this.stringToArray(string);
+  return this.arrayToHash(array);
+}
+
+
 module.exports = DataConverter;
