@@ -13,10 +13,9 @@ const TableView = function(props) {
 });
 
 
-
 return(
   <div>
-    <h4>Word Frequency Within Reviews</h4>
+    <h4 className="title">Word Frequency Within Reviews</h4>
 
     <table>
       <tbody>

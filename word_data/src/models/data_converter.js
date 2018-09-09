@@ -3,8 +3,7 @@ const DataConverter = function () {
 
 DataConverter.prototype.wordsToSingleString = function (words) {
   // Take all words and make them one string, and all lower case
-   const singleString = words.join().toLowerCase()
-   console.log(singleString);
+  const singleString = words.join().toLowerCase()
   return singleString;
   }
 
@@ -36,13 +35,12 @@ DataConverter.prototype.hashToArrayforTable = function (hash) {
     for(var word in hash) {
         var array = {}
         array[word] = hash[word]
-      arrayOfHashes.push(array)
-      }
-      return arrayOfHashes;
+        arrayOfHashes.push(array)
+        }
+    return arrayOfHashes;
 }
 
-
-// the D3 library I will use requires the input data in this specific format
+// the D3 library I use requires the input data in this specific format
 DataConverter.prototype.hashToD3Input = function (hash) {
   var data = []
    for(var word in hash) {
@@ -58,11 +56,9 @@ DataConverter.prototype.prepareWords = function (words) {
   return this.arrayToHash(array);
 }
 
-
 DataConverter.prototype.wordsPreparedForTable = function (words) {
   let hash = this.prepareWords(words);
   return this.hashToArrayforTable(hash);
-
 };
 
 DataConverter.prototype.wordsPreparedForWordCloud = function (words) {

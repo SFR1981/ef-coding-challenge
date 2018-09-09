@@ -35,16 +35,7 @@ render(){
     </Router>
 
       )
-
-//
-
   }
-
-
-
-
-
-
 }
 
 export default DataDisplay;

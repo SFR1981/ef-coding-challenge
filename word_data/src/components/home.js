@@ -2,8 +2,7 @@ import React from "react";
 
 const Home = () => (
   <div>
-    <h4>Home</h4>
-    <p>E Fundamentals Code Test</p>
+    <h1 className="title">E Fundamentals Code Challenge</h1>
   </div>
 );
 

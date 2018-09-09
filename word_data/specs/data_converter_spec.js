@@ -12,14 +12,12 @@ describe('data converter', function () {
 
   it('should convert a string into an array', function(){
     const result = converter.stringToArray("one,two,three,one");
-    console.log("result",result);
     assert.deepStrictEqual(result, [ 'one', 'two', 'three', 'one' ]);
   });
 
 
   it('should convert an array into an associated list object', function(){
       const result = converter.arrayToHash([ 'one', 'two', 'three', 'one' ])
-      console.log("result",result);
       assert.deepStrictEqual(result,  { one: 2, two: 1, three: 1 });
   });
 
@@ -32,7 +30,6 @@ describe('data converter', function () {
 
   it('should convert an object into a form tractable to d3', function(){
     const result = converter.hashToD3Input({ one: 2, two: 1, three: 1 });
-    console.log(result);
     assert.deepStrictEqual(result, [
                                     { text: 'one', value: 2 },
                                     { text: 'two', value: 1 },
@@ -59,8 +56,5 @@ describe('data converter', function () {
                                   { text: 'three', value: 1 }
                                  ])
       });
-
-
-
 
 });
