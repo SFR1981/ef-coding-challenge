@@ -9,6 +9,7 @@ const data = props.cloudWords
 
 return(
     <div>
+      <h4 className="title">Reviews Word Cloud</h4>
       <div className="word-cloud">
     <WordCloud
       data={data}
